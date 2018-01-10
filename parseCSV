@@ -1,0 +1,4 @@
+# Run: ./parseCSV file.txt
+# Where file.txt is a CSV text file copied from Wireshark -> Stastistics -> Conversations Window
+awk -F',' '{if (NR!=1) print substr($1,2,length($1)-2)}' $1 > src.txt
+awk -F',' '{if (NR!=1) print substr($2,2,length($2)-2)}' $1 > dst.txt
