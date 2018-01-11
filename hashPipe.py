@@ -1,13 +1,12 @@
-SRC = './src.txt'
-MEM_SIZE = 600
+SRC = './sourceCaida.txt'
+MEM_SIZE = 400
 D = 6
-STAGE_SIZE = MEM_SIZE / D
+STAGE_SIZE = int(MEM_SIZE / D)
 
-stage_init = [(0,0)] * STAGE_SIZE
-table = [stage] * D
+table = [[(0,0) for i in range(STAGE_SIZE)] for j in range(D)]
 
 def getHash(s, stage):
-	return abs(hash(s + str(stage))) % K
+	return abs(hash(s + str(stage))) % STAGE_SIZE
 
 with open(SRC) as f:  
 	ip = f.readline().strip()
@@ -15,14 +14,14 @@ with open(SRC) as f:
 	while ip:
 		index = getHash(ip, 0)
 		key = table[0][index][0]
-		val = table[0][index][1]
+		val = table[0][index][1]	
 
-		if key is ip:
-			val += 1
-		elif val is 0:
+		if key == ip:
+			table[0][index] = (key, val + 1)
+		elif val == 0:
 			table[0][index] = (ip, 1)
 		else:
-			cKey = key
+			cKey = ip
 			cVal = val
 
 			for i in range(1,D):
@@ -30,10 +29,10 @@ with open(SRC) as f:
 				key = table[i][index][0]
 				val = table[i][index][1]
 
-				if key is cKey:
-					table[i][index][1] += cKey
+				if key == cKey:
+					table[i][index] = (cKey, val + cVal)
 					break
-				elif val is 0:
+				elif val == 0:
 					table[i][index] = (cKey, cVal)
 					break
 				elif val < cVal:
@@ -45,22 +44,13 @@ with open(SRC) as f:
 
 		ip = f.readline().strip()
 
-all_Tuples = []
+allTuples = []
 for stg in table:
-	
+	for x in stg:
+		if x[0] != 0:
+			allTuples.append(x)
 
-sorted_by_second = sorted(data, key=lambda tup: tup[1])
+sortedTuples = sorted(allTuples, key=lambda tup: tup[1], reverse=True)
 
-for s in table:
-	for x in s:
-		if x[0] in hitter_dict:
-
-		hitter_dict[x[0]] = x[1]
-
-
-
-sorted_table = sorted(table, key=table.__getitem__, reverse=True)
-
-for k in sorted_table:
-	v = table[k]
-	print k + '\t\t\t' + str(v)
+for t in sortedTuples:
+	print str(t[0]) + '\t\t\t' + str(t[1])

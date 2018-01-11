@@ -8,7 +8,7 @@ def getProbMinKey(table):
 	minKey = ''
 	minVal = sys.maxint
 
-	for i in range(0, 4):
+	for i in range(0, 10):
 
 		r = random.choice(table.keys())
 		v = table[r]

@@ -2,6 +2,7 @@ import sys
 from sets import Set
 
 REF_FILE = './sourceCaida.txt'
+SIZE = 400
 
 
 def sortRef(K):
@@ -31,16 +32,17 @@ test_results = sys.argv[1]
 s = Set()
 
 with open("./" + test_results, "r") as f:
-
+	count = 0
 	for line in f:
+		count += 1
 		key = line.split()[0].strip()
 		s.add(key)
+		if count >= SIZE:
+			break
 
-K = len(s)
+K = min(len(s), SIZE)
 
 ref_list = sortRef(K)
-
-print len(ref_list)
 
 count = 0
 
@@ -49,7 +51,5 @@ for x in ref_list:
 		count += 1
 
 print count
-
-
-
+print count / float(SIZE)
 
