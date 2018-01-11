@@ -24,7 +24,6 @@ def sortRef(K):
 			ref_list.append(key)
 
 		del ref_list[K:]
-
 		return ref_list
 
 

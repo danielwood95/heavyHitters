@@ -43,10 +43,13 @@ with open(SRC) as f:
 			if len(table) < K:
 				table[ip] = 1
 			else:
-				minKey = getProbMinKey(table)
-				minVal = table[minKey]
-				table.pop(minKey)
-				table[ip] = minVal + 1
+				# probability of eviction
+				r = random.randint(0,100)
+				if r < 2:
+					minKey = getProbMinKey(table)
+					minVal = table[minKey]
+					table.pop(minKey)
+					table[ip] = minVal + 1
 		ip = f.readline().strip()
 
 sorted_table = sorted(table, key=table.__getitem__, reverse=True)
