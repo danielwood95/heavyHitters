@@ -1,8 +1,9 @@
 import sys
 import random
+import math
 
-SRC = './sourceCaida.txt'
-K = 400
+SRC = './srcCaida500000.txt'
+K = 900
 
 def getProbMinKey(table):
 	minKey = ''
@@ -44,10 +45,12 @@ with open(SRC) as f:
 				table[ip] = 1
 			else:
 				# probability of eviction
-				r = random.randint(0,100)
-				if r < 2:
-					minKey = getProbMinKey(table)
-					minVal = table[minKey]
+				r = random.uniform(0,1)
+				minKey = getProbMinKey(table)
+				minVal = table[minKey]
+				if r < (1/(6*math.log(minVal+1))):
+				#if r < 1/(minVal + 1):
+				#if r < 0.02:
 					table.pop(minKey)
 					table[ip] = minVal + 1
 		ip = f.readline().strip()

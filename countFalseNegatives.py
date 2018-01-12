@@ -2,7 +2,7 @@ import sys
 from sets import Set
 
 REF_FILE = './sourceCaida.txt'
-SIZE = 400
+SIZE = 300
 
 
 def sortRef(K):
