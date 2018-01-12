@@ -40,6 +40,7 @@ with open("./" + test_results, "r") as f:
 			break
 
 K = min(len(s), SIZE)
+print SIZE
 
 ref_list = sortRef(K)
 
