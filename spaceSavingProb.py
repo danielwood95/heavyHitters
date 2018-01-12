@@ -48,7 +48,7 @@ with open(SRC) as f:
 				r = random.uniform(0,1)
 				minKey = getProbMinKey(table)
 				minVal = table[minKey]
-				if r < (1/(6*math.log(minVal+1))):
+				if r < (1/(5*math.log(minVal+1))):
 				#if r < 1/(minVal + 1):
 				#if r < 0.02:
 					table.pop(minKey)
