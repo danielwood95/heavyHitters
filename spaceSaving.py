@@ -1,7 +1,7 @@
 import sys
 
 SRC = './sourceCaida.txt'
-K = 400
+TABLE_SIZE = 400
 
 def getMinKey(table):
 	minKey = ''
@@ -25,7 +25,7 @@ with open(SRC) as f:
 		if ip in table:
 			table[ip] = table[ip] + 1
 		else:
-			if len(table) < K:
+			if len(table) < TABLE_SIZE:
 				table[ip] = 1
 			else:
 				minKey = getMinKey(table)
