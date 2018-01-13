@@ -1,0 +1,8 @@
+Standard aggregate rate: 0.156666666667
+Feedback aggregate rate: 0.0883333333333
+Randomize all aggregate rate: 0.0443333333333
+Randomize all and feedback aggregate rate: 0.138333333333
+Randomize first stage (hash others) aggregate rate: 0.0336666666667
+Randomize first stage and save index for feedback aggregate rate: 0.0713333333333
+Randomize first stage and feedback aggregate rate: 0.181666666667
+Randomize all except first stage aggregate rate: 0.581

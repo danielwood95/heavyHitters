@@ -8,8 +8,8 @@ STAGE_SIZE = int(MEM_SIZE / D)
 table = [[(0,0) for i in range(STAGE_SIZE)] for j in range(D)]
 
 def getHash(s, stage):
-	#return abs(hash(s + str(stage))) % STAGE_SIZE
-	return random.randint(0,STAGE_SIZE-1)
+	return abs(hash(s + str(stage))) % STAGE_SIZE
+	#return random.randint(0,STAGE_SIZE-1)
 
 with open(SRC) as f:  
 	ip = f.readline().strip()
