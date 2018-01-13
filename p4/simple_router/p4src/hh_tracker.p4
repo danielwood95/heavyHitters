@@ -1,22 +1,6 @@
-field_list hash_list {
-    hh_meta.mKeyCarried;
-}
-
-field_list_calculation stage1_hash {
-    input {
-        hash_list;
-    }
-    algorithm : my_hash_1;
-    output_width : 5;
-}
-
-field_list_calculation stage2_hash {
-    input {
-        hash_list;
-    }
-    algorithm : my_hash_2;
-    output_width : 5;
-}
+/**********************************************************/
+/********************** metadata **************************/
+/**********************************************************/
 
 header_type tracking_metadata_t {
     fields {
@@ -31,6 +15,10 @@ header_type tracking_metadata_t {
 }
 
 metadata tracking_metadata_t hh_meta;
+
+/***************************************************************/
+/********************** table stage 1 **************************/
+/***************************************************************/
 
 register flow_tracker_stage1 {
     width: 32;
@@ -55,9 +43,8 @@ action do_stage1(){
     hh_meta.mKeyCarried = ipv4.srcAddr;
     hh_meta.mCountCarried = 0;
 
-    // hash using my custom function 
-    modify_field_with_hash_based_offset(hh_meta.mIndex, 0, stage1_hash,
-    32);
+    // generate random value
+    modify_field_rng_uniform(hh_meta.mIndex, 0, 31);
 
     // read the key and value at that location
     hh_meta.mKeyInTable = flow_tracker_stage1[hh_meta.mIndex];
@@ -68,7 +55,7 @@ action do_stage1(){
     hh_meta.mKeyInTable = (hh_meta.mValid == 0)? hh_meta.mKeyCarried : hh_meta.mKeyInTable;
     hh_meta.mDiff = (hh_meta.mValid == 0)? 0 : hh_meta.mKeyInTable - hh_meta.mKeyCarried;
 
-    // update hash table
+    // update table
     flow_tracker_stage1[hh_meta.mIndex] = ipv4.srcAddr;
     packet_counter_stage1[hh_meta.mIndex] = ((hh_meta.mDiff == 0)?
     hh_meta.mCountInTable + 1 : 1);
@@ -86,7 +73,9 @@ table track_stage1 {
     size: 0;
 }
 
+/***************************************************************/
 /********************** table stage 2 **************************/
+/***************************************************************/
 
 register flow_tracker_stage2 {
     width: 32;
@@ -107,9 +96,8 @@ register valid_bit_stage2 {
 }
 
 action do_stage2(){
-    // hash using my custom function 
-    modify_field_with_hash_based_offset(hh_meta.mIndex, 0, stage2_hash,
-    32);
+    // generate random value
+    modify_field_rng_uniform(hh_meta.mIndex, 0, 31);
 
     // read the key and value at that location
     hh_meta.mKeyInTable = flow_tracker_stage2[hh_meta.mIndex];
@@ -120,7 +108,7 @@ action do_stage2(){
     hh_meta.mKeyInTable = (hh_meta.mValid == 0)? hh_meta.mKeyCarried : hh_meta.mKeyInTable;
     hh_meta.mDiff = (hh_meta.mValid == 0)? 0 : hh_meta.mKeyInTable - hh_meta.mKeyCarried;
 
-    // update hash table
+    // update table
     flow_tracker_stage2[hh_meta.mIndex] = ((hh_meta.mDiff == 0)?
     hh_meta.mKeyInTable : ((hh_meta.mCountInTable <
     hh_meta.mCountCarried) ? hh_meta.mKeyCarried :
