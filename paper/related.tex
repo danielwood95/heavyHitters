@@ -11,7 +11,19 @@ Sketch algorithms are a family of algorithms that attempt to answer questions ab
 Counter Based Algorithms process every flow, but due to memory constraints, are only able to maintain a counter of a constant number of the heaviest flows. Therefore, these algorithms aim to retain counters of only heavy hitters while ignoring lighter flows through the use of strategic admission and eviction policies. Space Saving maintains a table of the frequencies of N flows, evicting the least frequent flow each time an unmonitored flow is encountered. The newly admitted element assumes the frequency of the evicted flow. This eviction policy results in large errors for heavy-tailed workloads, where many new small flows may wrongly evict larger flows. Furthermore, depending on the hardware implementation, it may be resource intensive to find the least frequent flow in the table for every newly encountered flow. 
 The intuition behind Randomized Admission Policy (RAP) is to minimize this error by being much more conservative about the elements that are admitted into the table. Instead of evicting the minimum element in the table for every new flow encountered, RAP only admits new flows with a probability of $1/(c_m + 1)$, where $c_m$ is the minimal counter value. By being more conservative, RAP has increased accuracy over Space Saver, but also makes it more difficult for new larger flows to gain admission. In our approach, we adopt elements of the randomized admission policy to prevent false evictions while also dampening the adverse effects of a conservative policy. 
 
+\begin{figure}[t]
+  \centering
+    \includegraphics[scale=0.5]{alg1}
+     \label{fig:bp-image}
+\end{figure}
+
 HashPipe is heavily inspired by Space Saver, but leverages feed-forward packet processing to divide the task of finding the minimum into small parts. The algorithm consists of d stages, each with its own hash function hd and an associated hash table. When a packet enters the pipeline at the first stage, the hash function h0 is used to hash its identifier to a bucket. Each bucket will contain a flow identifier and its associated count. If the identifier of an incoming packet matches the identifier stored in the bucket it hashes to, the count is incremented, and no further processing is done. Similarly, if the bucket is empty, the identifier is added with a count of 1, and processing stops. However, the rest of the pipeline comes into play if the incoming packet identifier does not match the stored packet identifier. In this case, the stored packet will be evicted, and the incoming packet will be stored in its place with a count of 1. In actual implementations of HashPipe on hardware, the identifier and count of the “evicted” packet is added to the incoming packet as metadata, and the original packet continues to flow down the pipeline with this metadata.
+
+\begin{figure}[t]
+  \centering
+    \includegraphics[scale=0.42]{alg2}
+     \label{fig:bp-image}
+\end{figure}
 
 In subsequent stages, the key-counter pair that has been evicted is hashed using the corresponding hash function hd and it is compared to the stored value in that bucket. Instead of always evicting like in the first stage, the stored value will only be evicted if it is the minimum between the two counter values. If the stored value is less, the key-counter pairs are swapped, and the key previously in the table becomes the carried key. This same process is repeated at each stage until one pseudo-minimum value is carried off the end.
 
