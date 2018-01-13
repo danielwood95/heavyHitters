@@ -1,5 +1,9 @@
 \BOOKMARK [1][]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][]{section.2}{Design}{}% 2
-\BOOKMARK [1][]{section.3}{Evaluation}{}% 3
-\BOOKMARK [1][]{section.4}{Related Work}{}% 4
-\BOOKMARK [1][]{section.5}{Conclusions}{}% 5
+\BOOKMARK [2][]{subsection.2.1}{Randomized ``Hashing''}{section.2}% 3
+\BOOKMARK [1][]{section.3}{Evaluation}{}% 4
+\BOOKMARK [1][]{section.4}{Related Work}{}% 5
+\BOOKMARK [2][]{subsection.4.1}{Sampling Algorithms}{section.4}% 6
+\BOOKMARK [2][]{subsection.4.2}{Sketch Algorithms}{section.4}% 7
+\BOOKMARK [2][]{subsection.4.3}{Counter Based Algorithms}{section.4}% 8
+\BOOKMARK [1][]{section.5}{Conclusions}{}% 9
