@@ -4,9 +4,11 @@
 \BOOKMARK [2][]{subsection.2.2}{Sketch Algorithms}{section.2}% 4
 \BOOKMARK [2][]{subsection.2.3}{Counter Based Algorithms}{section.2}% 5
 \BOOKMARK [1][]{section.3}{Design}{}% 6
-\BOOKMARK [2][]{subsection.3.1}{Randomized ``Hashing''}{section.3}% 7
-\BOOKMARK [1][]{section.4}{Evaluation}{}% 8
-\BOOKMARK [2][]{subsection.4.1}{Accuracy Metrics}{section.4}% 9
-\BOOKMARK [2][]{subsection.4.2}{Comparison of HashPipe Implementations}{section.4}% 10
-\BOOKMARK [2][]{subsection.4.3}{Space Saver Comparison}{section.4}% 11
-\BOOKMARK [1][]{section.5}{Conclusions}{}% 12
+\BOOKMARK [2][]{subsection.3.1}{Probabilistic Minimum}{section.3}% 7
+\BOOKMARK [2][]{subsection.3.2}{Randomized Assignment}{section.3}% 8
+\BOOKMARK [2][]{subsection.3.3}{Logarithmic Admission Policy}{section.3}% 9
+\BOOKMARK [1][]{section.4}{Evaluation}{}% 10
+\BOOKMARK [2][]{subsection.4.1}{Accuracy Metrics}{section.4}% 11
+\BOOKMARK [2][]{subsection.4.2}{Comparison of HashPipe Implementations}{section.4}% 12
+\BOOKMARK [2][]{subsection.4.3}{Space Saving Comparison}{section.4}% 13
+\BOOKMARK [1][]{section.5}{Conclusions}{}% 14
