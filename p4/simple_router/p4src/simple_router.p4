@@ -179,8 +179,19 @@ table send_frame {
 }
 
 control ingress {
+    /*interview loop
+    if(hh_meta.mSecondLoop == 1) {
+        apply(track_stage3);
+    } else {
+        apply(track_stage1);
+        apply(track_stage2);
+    }
+
+    */
     apply(track_stage1);
     apply(track_stage2);
+    /*add if interview no loop
+    apply(track_stage3)*/
     if(valid(ipv4)) {
         if(ipv4.ttl > 1) {
             apply(ipv4_lpm);
