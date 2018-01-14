@@ -202,10 +202,10 @@ action do_stage3(){
         ((hh_meta.mCountInTable <= 200)? 9 :
         ((hh_meta.mCountInTable <= 700)? 7 :
         ((hh_meta.mCountInTable <= 5000)? 6 :
-        ((hh_meta.mCountInTable <= 100000)? 5 : 4)))))))))))))));
+        ((hh_meta.mCountInTable <= 100000)? 5 : hh_meta.mCountCarried)))))))))))))));
 
     // Indicates keep if negative, replace if >= 0
-    hh_meta.mDiff = hh_meta.mLog - hh_meta.mRand;
+    hh_meta.mDiff = (hh_meta.mLog == 0)? 4 - hh_meta.mLog : hh_meta.mLog - hh_meta.mRand;
 
     // update table
     flow_tracker_stage1[hh_meta.mIndex] = ((hh_meta.mDiff >= 0)?
