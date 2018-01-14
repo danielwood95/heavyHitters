@@ -1,15 +1,47 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Freedman et~al.(2004)Freedman, Freudenthal, and
-  Mazi{\`e}res]{coral:nsdi04}
-M.~J. Freedman, E.~Freudenthal, and D.~Mazi{\`e}res.
-\newblock Democratizing content publication with {Coral}.
-\newblock In \emph{Proc.\ 1st Symposium on Networked Systems Design and
-  Implementation ({NSDI})}, San Francisco, CA, Mar. 2004.
+\bibitem[Ben~Basat(2017)]{rap}
+E.~G. F. R. K.~Y. Ben~Basat, R.
+\newblock Randomized admission policy for efficient top-k and frequency
+  estimation.
+\newblock In \emph{IEEE INFOCOM 2017 Conference on Computer Communications},
+  Atlanta, GA, 2017.
+
+\bibitem[Cormode and Muthukrishnan(2003)]{countmin}
+G.~Cormode and S.~Muthukrishnan.
+\newblock An improved data stream summary: the count-min sketch and its
+  applications.
+\newblock \emph{Journal of Algorithms}, 55\penalty0 (1):\penalty0 58--75, 4
+  2003.
+
+\bibitem[Estan and Varghese(2003)]{samplehold}
+C.~Estan and G.~Varghese.
+\newblock New directions in traffic measurement and accounting: Focusing on the
+  elephants, ignoring the mice.
+\newblock \emph{ACM Transactions on Computer Systems}, 21\penalty0
+  (3):\penalty0 270--313, 8 2003.
+
+\bibitem[Metwally and El~Abbadi(2005)]{spacesaving}
+A.~D. Metwally, A. and A.~El~Abbadi.
+\newblock Efficient computation of frequent and top-k elements in data streams.
+\newblock \emph{International Conference on Database Theory}, 3363\penalty0
+  (1), 1 2005.
+
+\bibitem[Netflow()]{netflow}
+C.~Netflow.
+\newblock Netflow.
+\newblock
+  https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html.
+
+\bibitem[Sivaraman and Rexford(2017)]{hashpipe}
+N.~S. R. O. M.~S. Sivaraman, V. and J.~Rexford.
+\newblock Heavy-hitter detection entirely in the data plane.
+\newblock In \emph{Proceedings of ACM Symposium on SDN Research 2017}, Santa
+  Clara, CA, Apr. 2017.
 
 \end{thebibliography}

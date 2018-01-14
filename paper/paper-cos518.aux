@@ -16,7 +16,8 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{coral:nsdi04}
+\citation{netflow}
+\citation{samplehold}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Graph of the cumulative traffic addressed to/from the top k sources/destinations, captured from an ISP backbone link}}{1}{figure.1}}
@@ -24,22 +25,34 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{section.2}}
 \newlabel{sec:related}{{2}{1}{Related Work}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Sampling Algorithms}{1}{subsection.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sketch Algorithms}{1}{subsection.2.2}}
+\citation{countmin}
+\citation{spacesaving}
+\citation{rap}
+\citation{hashpipe}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sketch Algorithms}{2}{subsection.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Counter Based Algorithms}{2}{subsection.2.3}}
 \newlabel{fig:bp-image}{{2.3}{2}{Counter Based Algorithms}{subsection.2.3}{}}
 \newlabel{fig:bp-image}{{2.3}{3}{Counter Based Algorithms}{subsection.2.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Design}{3}{section.3}}
-\newlabel{sec:design}{{3}{3}{Design}{section.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The minimum of a randomly selected set of elements approaches the true minimum}}{3}{figure.2}}
 \newlabel{fig:bp-image}{{2}{3}{The minimum of a randomly selected set of elements approaches the true minimum}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Design}{3}{section.3}}
+\newlabel{sec:design}{{3}{3}{Design}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Randomized ``Hashing''}{3}{subsection.3.1}}
-\bibdata{local}
-\bibcite{coral:nsdi04}{{1}{2004}{{Freedman et~al.}}{{Freedman, Freudenthal, and Mazi{\`e}res}}}
-\bibstyle{abbrvnat}
+\newlabel{fig:bp-image}{{3.1}{4}{Randomized ``Hashing''}{subsection.3.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{4}{section.4}}
 \newlabel{sec:eval}{{4}{4}{Evaluation}{section.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{4}{section.5}}
-\newlabel{sec:conclusion}{{5}{4}{Conclusions}{section.5}{}}
-\newlabel{fig:bp-image}{{3.1}{4}{Randomized ``Hashing''}{subsection.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}}{4}{figure.3}}
-\newlabel{fig:bp-image}{{3}{4}{Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}{figure.3}{}}
+\bibdata{local}
+\bibcite{rap}{{1}{2017}{{Ben~Basat}}{{}}}
+\bibcite{countmin}{{2}{2003}{{Cormode and Muthukrishnan}}{{}}}
+\bibcite{samplehold}{{3}{2003}{{Estan and Varghese}}{{}}}
+\bibcite{spacesaving}{{4}{2005}{{Metwally and El~Abbadi}}{{}}}
+\bibcite{netflow}{{5}{}{{Netflow}}{{}}}
+\bibcite{hashpipe}{{6}{2017}{{Sivaraman and Rexford}}{{}}}
+\bibstyle{abbrvnat}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Accuracy Metrics}{5}{subsection.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{5}{section.5}}
+\newlabel{sec:conclusion}{{5}{5}{Conclusions}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}}{5}{figure.3}}
+\newlabel{fig:bp-image}{{3}{5}{Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}}{6}{figure.4}}
+\newlabel{fig:bp-image}{{4}{6}{Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}{figure.4}{}}

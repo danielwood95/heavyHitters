@@ -2,7 +2,7 @@
 \label{sec:design}
 
 Probabilistic Minimum
-Starting with the Space Saver algorithm as a baseline, one of the first improvements we made was locating a probabilistic minimum using sampling, rather than linearly searching through the entire table to find the minimum. Furthermore, as long as a flow with a low enough frequency is evicted, larger flows will still be preserved in the table. As the table below shows, sampling as few as 4 elements probabilistically ensures that only elements in the lowest quintile will be evicted. This optimization is implemented in the hash table pipeline, as the number of stages equals the number of elements probabilistically sampled. If there are 4 stages in the pipeline, the minimum of the four flows encountered (one per stage) will be a candidate for eviction. 
+Starting with the Space Saver algorithm as a baseline, one of the first improvements we made was locating a probabilistic minimum using sampling, rather than linearly searching through the entire table to find the minimum. Furthermore, as long as a flow with a low enough frequency is evicted, larger flows will still be preserved in the table. As the table below shows, sampling as few as 4 elements probabilistically ensures that only elements in the lowest quintile will be evicted. This optimization is implemented in the hash table pipeline, as the number of stages equals the number of elements probabilistically sampled. If there are four stages in the pipeline, the minimum of the four flows encountered (one per stage) will be a candidate for eviction. 
  
 \begin{figure}[t]
   \centering
