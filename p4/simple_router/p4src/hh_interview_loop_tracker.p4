@@ -8,6 +8,20 @@ field_list hash_list {
     hh_meta.mKeyCarried;
 }
 
+field_list resubmit_list {
+    hh_meta.mKeyInTable;
+    hh_meta.mCountInTable;
+    hh_meta.mIndex;
+    hh_meta.mValid;
+    hh_meta.mKeyCarried;
+    hh_meta.mCountCarried;
+    hh_meta.mDiff;
+    hh_meta.mRand;
+    hh_meta.mLog;
+    hh_meta.mOrigIndex;
+    hh_meta.mSecondLoop;
+}
+
 field_list_calculation stage1_hash {
     input {
         hash_list;
@@ -163,7 +177,7 @@ action do_stage2(){
     hh_meta.mCountInTable);  
     hh_meta.mSecondLoop = 1;
 
-    resubmit(hh_meta);
+    resubmit(resubmit_list);
 }
 
 table track_stage2 {
