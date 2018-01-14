@@ -3,7 +3,7 @@
 %%% Set these variables appropriately
 %%%
 \newcommand{\AUTHORS}{Justin Athill, Angela Hillsman, and Daniel Wood}
-\newcommand{\TITLE}{PAPER TITLE HERE}
+\newcommand{\TITLE}{HashFilter: Filtering Streams of Data for Top-K Heavy Hitters}
 \newcommand{\KEYWORDS}{}
 \newcommand{\CONFERENCE}{COS 561 Final Project}
 \newcommand{\PAGENUMBERS}{yes}       % "yes" or "no"
@@ -67,15 +67,17 @@ bookmarksopen = {true}
   \pagestyle{empty}
 }
 
-\makeatletter\long\def\@makecaption#1#2{
-   \vskip 10pt
-   \setbox\@tempboxa\hbox{\textsf{#1: #2}}
-   \ifdim \wd\@tempboxa >\hsize % IF longer than one line:
-       \textsf{#1: #2}\par      % THEN set as ordinary paragraph.
-     \else                      % ELSE  center.
-       \hbox to\hsize{\hfil\box\@tempboxa\hfil}
-   \fi}
-\makeatother
+%\makeatletter\long\def\@makecaption#1#2{
+%   \vskip 10pt
+%   \setbox\@tempboxa\hbox{\textsf{#1: #2}}
+%   \ifdim \wd\@tempboxa >\hsize % IF longer than one line:
+%       \textsf{#1: #2}\par      % THEN set as ordinary paragraph.
+%     \else                      % ELSE  center.
+%       \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+%   \fi}
+%\makeatother
+
+\usepackage[labelfont={sf,bf}, font={small, sf}]{caption}
 
 \clubpenalty=10000  % Don't allow orphans
 \widowpenalty=10000 % Don't allow widows
@@ -131,6 +133,7 @@ bookmarksopen = {true}
 \input{intro}
 \input{related}
 \input{design}
+\input{prototype}
 \input{eval}
 \input{conclusion}
 

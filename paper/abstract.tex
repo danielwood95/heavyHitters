@@ -2,6 +2,6 @@
 % $Id: abstract.tex 70 2007-01-30 21:59:16Z nicolosi $
 
 \begin{abstract}
-In this paper, we present BLANK, a heavy hitter detection algorithm that identifies the $k$ most frequent senders along an ISP backbone link for the purpose of DoS detection. We address the advantages and disadvantages of sampling techniques and counter based methods, and propose an improved algorithm that increases accuracy per space used by combining elements of both. Furthermore, we design BLANK to run on emerging programmable switches. BLANK is prototyped in p4 and evaluated using 3 separate CAIDA datasets from an ISP backbone link. For top-k, we experimentally identify over 98 percent of the top 300 hitters using 4500 counters on a trace containing nearly 3 million packets.
+In this paper, we present two implementations of HashFilter, a heavy hitter detection algorithm that identifies the $k$ most frequent senders along an ISP backbone link for the purpose of DoS detection. We address the advantages and disadvantages of sampling techniques and counter based methods, and propose an improved algorithm that increases accuracy per space used by combining elements of both. Furthermore, we design HashFilter to run on emerging programmable switches. HashFilteris prototyped in P4 and evaluated using 3 separate CAIDA datasets from an ISP backbone link. For top-k, we experimentally identify over 98 percent of the top 300 hitters using 4500 counters on a trace containing nearly 3 million packets.
 \end{abstract}
 

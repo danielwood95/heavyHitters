@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,11 @@ E.~G. F. R. K.~Y. Ben~Basat, R.
   estimation.
 \newblock In \emph{IEEE INFOCOM 2017 Conference on Computer Communications},
   Atlanta, GA, 2017.
+
+\bibitem[Consortium(2016)]{p4lang}
+T.~P.~L. Consortium.
+\newblock The p4 language specification: Version 1.1.0, 2016.
+\newblock URL \url{https://p4.org/p4-spec/p4-14/v1.1.0/tex/p4.pdf}.
 
 \bibitem[Cormode and Muthukrishnan(2003)]{countmin}
 G.~Cormode and S.~Muthukrishnan.
@@ -26,6 +31,11 @@ C.~Estan and G.~Varghese.
 \newblock \emph{ACM Transactions on Computer Systems}, 21\penalty0
   (3):\penalty0 270--313, 8 2003.
 
+\bibitem[for Applied Internet Data~Analysis(2017)]{caida}
+C.~for Applied Internet Data~Analysis.
+\newblock Caida data, 2017.
+\newblock URL \url{www.caida.org}.
+
 \bibitem[Metwally and El~Abbadi(2005)]{spacesaving}
 A.~D. Metwally, A. and A.~El~Abbadi.
 \newblock Efficient computation of frequent and top-k elements in data streams.
@@ -35,13 +45,23 @@ A.~D. Metwally, A. and A.~El~Abbadi.
 \bibitem[Netflow()]{netflow}
 C.~Netflow.
 \newblock Netflow.
-\newblock
-  https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html.
+\newblock URL
+  \url{https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html}.
 
 \bibitem[Sivaraman and Rexford(2017)]{hashpipe}
 N.~S. R. O. M.~S. Sivaraman, V. and J.~Rexford.
 \newblock Heavy-hitter detection entirely in the data plane.
 \newblock In \emph{Proceedings of ACM Symposium on SDN Research 2017}, Santa
   Clara, CA, Apr. 2017.
+
+\bibitem[Sivaraman(2016)]{p4code}
+V.~Sivaraman.
+\newblock P4 implementation of hashpipe code, 2016.
+\newblock URL \url{https://github.com/vibhaa/iw15-heavyhitters/p4v1_1}.
+
+\bibitem[Team()]{mininet}
+M.~Team.
+\newblock Mininet: An instant virtual network on your laptop (or other pc).
+\newblock URL \url{https://mininet.org}.
 
 \end{thebibliography}
