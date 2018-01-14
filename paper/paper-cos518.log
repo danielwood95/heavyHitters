@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JAN 2018 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 JAN 2018 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,6 +414,18 @@ LaTeX Warning: Label `fig:bp-image' multiply defined.
 
 LaTeX Warning: Label `fig:bp-image' multiply defined.
 
+
+LaTeX Warning: Label `fig:bp-image' multiply defined.
+
+
+LaTeX Warning: Label `fig:bp-image' multiply defined.
+
+
+LaTeX Warning: Label `fig:bp-image' multiply defined.
+
+
+LaTeX Warning: Label `fig:bp-image' multiply defined.
+
 )
 \openout1 = `paper-cos518.aux'.
 
@@ -565,7 +577,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  (./abstract.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
-) (./intro.tex <cumulative.png, id=44, 670.505pt x 382.42876pt>
+) (./intro.tex <cumulative.png, id=52, 670.505pt x 382.42876pt>
 File: cumulative.png Graphic file (type png)
 
 <use cumulative.png>
@@ -591,26 +603,26 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./cumulative.png>] <alg1.png, id=64, 523.9575pt x 304.13625pt>
+ <./cumulative.png>] <alg1.png, id=72, 523.9575pt x 304.13625pt>
 File: alg1.png Graphic file (type png)
  <use alg1.png>
-Package pdftex.def Info: alg1.png used on input line 16.
+Package pdftex.def Info: alg1.png used on input line 17.
 (pdftex.def)             Requested size: 261.9781pt x 152.06775pt.
 
-Overfull \hbox (32.1006pt too wide) in paragraph at lines 16--18
+Overfull \hbox (32.1006pt too wide) in paragraph at lines 17--19
  [][] 
  []
 
-<alg2.png, id=66, 518.93875pt x 619.31375pt>
+<alg2.png, id=74, 518.93875pt x 619.31375pt>
 File: alg2.png Graphic file (type png)
  <use alg2.png>
-Package pdftex.def Info: alg2.png used on input line 24.
+Package pdftex.def Info: alg2.png used on input line 25.
 (pdftex.def)             Requested size: 217.95279pt x 260.11pt.
 
 Underfull \vbox (badness 3098) has occurred while \output is active []
 
  [2 <./alg1.png>]) (./design.tex
-Underfull \vbox (badness 3907) has occurred while \output is active []
+Underfull \vbox (badness 1648) has occurred while \output is active []
 
 
 Underfull \hbox (badness 2293) in paragraph at lines 4--6
@@ -622,12 +634,12 @@ Underfull \hbox (badness 1062) in paragraph at lines 4--6
 \T1/ptm/m/n/10.95 prove-ments we made was lo-cat-ing a prob-a-bilis-
  []
 
-<probMin.png, id=79, 670.505pt x 370.38374pt>
+<probMin.png, id=88, 670.505pt x 370.38374pt>
 File: probMin.png Graphic file (type png)
  <use probMin.png>
 Package pdftex.def Info: probMin.png used on input line 9.
 (pdftex.def)             Requested size: 214.56598pt x 118.5252pt.
- [3 <./alg2.png> <./probMin.png>] <alg3.png, id=87, 521.95pt x 748.7975pt>
+ [3 <./alg2.png> <./probMin.png>] <alg3.png, id=96, 521.95pt x 748.7975pt>
 File: alg3.png Graphic file (type png)
  <use alg3.png>
 Package pdftex.def Info: alg3.png used on input line 26.
@@ -644,31 +656,89 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4 <./alg3.png>]
-Underfull \hbox (badness 1460) in paragraph at lines 9--10
+Underfull \vbox (badness 4859) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 16--17
+\T1/ptm/m/n/10.95 We be-gan al-go-rithm com-par-i-son by vary-ing the
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 16--17
 \T1/ptm/m/n/10.95 avail-able mem-ory size, which cor-re-sponds to a
  []
 
-<algComparison.png, id=94, 469.755pt x 352.6776pt>
-File: algComparison.png Graphic file (type png)
- <use algComparison.png>
-Package pdftex.def Info: algComparison.png used on input line 14.
-(pdftex.def)             Requested size: 272.45808pt x 204.55315pt.
+[5] <bouncer.png, id=107, 469.755pt x 352.6776pt>
+File: bouncer.png Graphic file (type png)
+ <use bouncer.png>
+Package pdftex.def Info: bouncer.png used on input line 26.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
 
-Overfull \hbox (42.58058pt too wide) in paragraph at lines 14--15
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 26--27
  [][] 
  []
 
-<stageComparison.png, id=95, 469.755pt x 352.6776pt>
+<interview.png, id=108, 469.755pt x 352.6776pt>
+File: interview.png Graphic file (type png)
+ <use interview.png>
+Package pdftex.def Info: interview.png used on input line 33.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
+
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 33--34
+ [][] 
+ []
+
+<random.png, id=109, 469.755pt x 352.6776pt>
+File: random.png Graphic file (type png)
+ <use random.png>
+Package pdftex.def Info: random.png used on input line 39.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
+
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 39--40
+ [][] 
+ []
+
+<log.png, id=110, 469.755pt x 352.6776pt>
+File: log.png Graphic file (type png)
+ <use log.png>
+Package pdftex.def Info: log.png used on input line 46.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
+
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 46--47
+ [][] 
+ []
+
+<falsenegatives.png, id=111, 469.755pt x 352.6776pt>
+File: falsenegatives.png Graphic file (type png)
+ <use falsenegatives.png>
+Package pdftex.def Info: falsenegatives.png used on input line 53.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
+
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 53--54
+ [][] 
+ []
+
+<stageComparison.png, id=112, 469.755pt x 352.6776pt>
 File: stageComparison.png Graphic file (type png)
- <use stageComparison.png>
-Package pdftex.def Info: stageComparison.png used on input line 21.
-(pdftex.def)             Requested size: 272.45808pt x 204.55315pt.
 
-Overfull \hbox (42.58058pt too wide) in paragraph at lines 21--22
+<use stageComparison.png>
+Package pdftex.def Info: stageComparison.png used on input line 60.
+(pdftex.def)             Requested size: 234.87692pt x 176.33836pt.
+
+Overfull \hbox (4.99942pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-) (./conclusion.tex) (./paper-cos518.bbl
+<spacesaver.png, id=113, 469.755pt x 352.6776pt>
+File: spacesaver.png Graphic file (type png)
+ <use spacesaver.png>
+Package pdftex.def Info: spacesaver.png used on input line 67.
+(pdftex.def)             Requested size: 211.3878pt x 158.70345pt.
+)
+(./conclusion.tex) (./paper-cos518.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 36--40
 []\T1/ptm/m/n/10 C. Net-flow.  Net-flow.
  []
@@ -678,17 +748,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--40
 \T1/ptm/m/n/10 https://www.cisco.com/c/en/us/products/ios-nx-
  []
 
-)
+[6 <./bouncer.png> <./interview.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
- [5 <./algComparison.png>] [6
+ [7 <./random.png> <./log.png> <./falsenegatives.png>] [8
 
- <./stageComparison.png>]
+ <./stageComparison.png> <./spacesaver.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
- (./paper-cos518.aux)
+
+(./paper-cos518.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `paper-cos518.out' has not changed.
-(rerunfilecheck)             Checksum: DD69F481A52AE85A8DC50EB6BB5A64C5;560.
+(rerunfilecheck)             Checksum: 901E92DBCFE3B7A90AEFF8A7B815DCA6;718.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -696,13 +767,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 7285 strings out of 493089
- 106205 string characters out of 6134842
- 194851 words of memory out of 5000000
- 10598 multiletter control sequences out of 15000+600000
+ 7320 strings out of 493089
+ 106689 string characters out of 6134842
+ 195712 words of memory out of 5000000
+ 10620 multiletter control sequences out of 15000+600000
  51050 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,43p,1373b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,8n,43p,2067b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -711,10 +782,10 @@ ve/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on paper-cos518.pdf (6 pages, 655570 bytes).
+Output written on paper-cos518.pdf (8 pages, 1077704 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

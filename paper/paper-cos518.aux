@@ -32,6 +32,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sketch Algorithms}{2}{subsection.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Counter Based Algorithms}{2}{subsection.2.3}}
 \newlabel{fig:bp-image}{{2.3}{2}{Counter Based Algorithms}{subsection.2.3}{}}
+\citation{hashpipe}
 \newlabel{fig:bp-image}{{2.3}{3}{Counter Based Algorithms}{subsection.2.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The minimum of a randomly selected set of elements approaches the true minimum}}{3}{figure.2}}
 \newlabel{fig:bp-image}{{2}{3}{The minimum of a randomly selected set of elements approaches the true minimum}{figure.2}{}}
@@ -41,6 +42,8 @@
 \newlabel{fig:bp-image}{{3.1}{4}{Randomized ``Hashing''}{subsection.3.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{4}{section.4}}
 \newlabel{sec:eval}{{4}{4}{Evaluation}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Accuracy Metrics}{5}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Comparison of HashPipe Implementations}{5}{subsection.4.2}}
 \bibdata{local}
 \bibcite{rap}{{1}{2017}{{Ben~Basat}}{{}}}
 \bibcite{countmin}{{2}{2003}{{Cormode and Muthukrishnan}}{{}}}
@@ -48,11 +51,20 @@
 \bibcite{spacesaving}{{4}{2005}{{Metwally and El~Abbadi}}{{}}}
 \bibcite{netflow}{{5}{}{{Netflow}}{{}}}
 \bibcite{hashpipe}{{6}{2017}{{Sivaraman and Rexford}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of Bouncer admission policy algorithm with different levels of random hashing. In hashPipeBouncer-nonRandom, consistent hash functions are used in every stage, and no randomnes is applied. The hashPipeBouncer algorithm, only applies randomness in the first stage--should an incoming packet be admitted to the table, it is placed at a random index rather than using a hash function. This variation performed the best across all tested memory sizes and is the main Bouncer algorithm we use in further comparison. The hashPipeRandomBouncer algorithm does comparisons and inserts at random indices in all table stages, and was also shown to be outperformed by limiting randomization to the first stage.}}{6}{figure.3}}
+\newlabel{fig:bp-image}{{3}{6}{Comparison of Bouncer admission policy algorithm with different levels of random hashing. In hashPipeBouncer-nonRandom, consistent hash functions are used in every stage, and no randomnes is applied. The hashPipeBouncer algorithm, only applies randomness in the first stage--should an incoming packet be admitted to the table, it is placed at a random index rather than using a hash function. This variation performed the best across all tested memory sizes and is the main Bouncer algorithm we use in further comparison. The hashPipeRandomBouncer algorithm does comparisons and inserts at random indices in all table stages, and was also shown to be outperformed by limiting randomization to the first stage}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Space Saver Comparison}{6}{subsection.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Impact of random hashing rather than using hash functions. The hashPipeRandom algorithm randomizing indices in all stages and provides some benefits at high memory sizes. The hashPipefRand algorithm only hashes to a random index in the first stage and then uses consistent hash functions in the following stages. Randomization in the first stage improves accuracy rates across the entire tested memory range, showing that randomization is useful absent any strict admission policy.}}{6}{figure.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{6}{section.5}}
+\newlabel{sec:conclusion}{{5}{6}{Conclusions}{section.5}{}}
 \bibstyle{abbrvnat}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Accuracy Metrics}{5}{subsection.4.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{5}{section.5}}
-\newlabel{sec:conclusion}{{5}{5}{Conclusions}{section.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}}{5}{figure.3}}
-\newlabel{fig:bp-image}{{3}{5}{Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}}{6}{figure.4}}
-\newlabel{fig:bp-image}{{4}{6}{Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Impact of random hashing rather than using hash functions. The hashPipeRandom algorithm randomizing indices in all stages and provides some benefits at high memory sizes. The hashPipefRand algorithm only hashes to a random index in the first stage and then uses consistent hash functions in the following stages. Randomization in the first stage improves accuracy rates across the entire tested memory range, showing that randomization is useful absent any strict admission policy.}}{7}{figure.5}}
+\newlabel{fig:bp-image}{{5}{7}{Impact of random hashing rather than using hash functions. The hashPipeRandom algorithm randomizing indices in all stages and provides some benefits at high memory sizes. The hashPipefRand algorithm only hashes to a random index in the first stage and then uses consistent hash functions in the following stages. Randomization in the first stage improves accuracy rates across the entire tested memory range, showing that randomization is useful absent any strict admission policy}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Impact of varying the factor f when calculating the admission threshold $p = 1 / (f*log(c_m + 1))$. Results show that factors of 5 and greater experienced relatively similar accuracy rates for both front rejection and back rejection.}}{7}{figure.6}}
+\newlabel{fig:bp-image}{{6}{7}{Impact of varying the factor f when calculating the admission threshold $p = 1 / (f*log(c_m + 1))$. Results show that factors of 5 and greater experienced relatively similar accuracy rates for both front rejection and back rejection}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}}{7}{figure.7}}
+\newlabel{fig:bp-image}{{7}{7}{Comparison of false negatives of Interview and Bouncer to baseline. Both algorithm optimizations improve on the standard HashPipe algorithm over the entire tested memory range}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}}{8}{figure.8}}
+\newlabel{fig:bp-image}{{8}{8}{Comparison of algorithms when number of table stages is varied. Interview and Bouncer do not suffer from the same accuracy drawbacks as the baseline when increasing the number of table stages}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of Interview and Bouncer with Space Saver}}{8}{figure.9}}
+\newlabel{fig:bp-image}{{9}{8}{Comparison of Interview and Bouncer with Space Saver}{figure.9}{}}
