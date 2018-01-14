@@ -162,6 +162,8 @@ action do_stage2(){
     hh_meta.mCountCarried = ((hh_meta.mDiff == 0) ? 0:
     hh_meta.mCountInTable);  
     hh_meta.mSecondLoop = 1;
+
+    resubmit(hh_meta);
 }
 
 table track_stage2 {
