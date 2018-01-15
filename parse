@@ -1,1 +1,1 @@
-awk -F',' '/No.     Source                Destination/{getline;print $1;}' exportLite
+awk -F',' '($1 ~ /^[0-9]/){print $0}' caida3.txt
