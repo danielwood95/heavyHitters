@@ -1,3 +1,4 @@
 \section{Conclusions}
 \label{sec:conclusion}
 
+We set out to create an algorithm that solves the top-$k$ Heavy Hitters problem while making efficient use of switch hardware functionality. Building off of HashPipe, we created an algorithm, HashFilter, with two variants of restricted admission policy: Bouncer and Interview. These achieved the same accuracy of HashPipe while requiring less than half of the memory resources. Using real traffic data, we show experimental results that justify our design choices and prototype HashFilter with P4 to confirm its viability on hardware.
